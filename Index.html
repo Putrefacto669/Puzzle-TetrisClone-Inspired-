@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Clon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>TETRIS</h1>
+    
+    <div class="game-container">
+        <div class="game-board" id="board"></div>
+        
+        <div class="side-panel">
+            <div class="panel">
+                <h2>SIGUIENTE</h2>
+                <div class="next-piece" id="next-piece"></div>
+            </div>
+            
+            <div class="panel">
+                <h2>PUNTUACIÓN</h2>
+                <div class="score-display" id="score">0</div>
+            </div>
+            
+            <div class="panel controls">
+                <h2>CONTROLES</h2>
+                <button id="start-btn">INICIAR JUEGO</button>
+                <button id="pause-btn">PAUSA</button>
+                <button id="reset-btn">REINICIAR</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <h3>INSTRUCCIONES</h3>
+        <p>← → : Mover pieza izquierda/derecha</p>
+        <p>↓ : Bajar pieza más rápido</p>
+        <p>↑ : Rotar pieza</p>
+        <p>Espacio : Soltar pieza</p>
+    </div>
+    
+    <div class="game-over hidden" id="game-over">
+        <h2>JUEGO TERMINADO</h2>
+        <p>Tu puntuación: <span id="final-score">0</span></p>
+        <button id="restart-btn">JUGAR DE NUEVO</button>
+    </div>
+
+    <!-- Scripts al final -->
+    <script src="js/pieces.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
