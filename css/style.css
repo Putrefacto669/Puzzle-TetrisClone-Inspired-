@@ -1,0 +1,163 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+            letter-spacing: 2px;
+        }
+        
+        .game-container {
+            display: flex;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .game-board {
+            width: 300px;
+            height: 600px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 3px solid #0ff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+            display: grid;
+            grid-template-rows: repeat(20, 1fr);
+            grid-template-columns: repeat(10, 1fr);
+            gap: 1px;
+            padding: 2px;
+        }
+        
+        .cell {
+            background-color: rgba(30, 30, 60, 0.7);
+            border-radius: 2px;
+        }
+        
+        .filled {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .side-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 200px;
+        }
+        
+        .panel {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+        
+        h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #0ff;
+            text-align: center;
+        }
+        
+        .next-piece {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+        }
+        
+        .score-display {
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: bold;
+            color: #0f0;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+        }
+        
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        button {
+            background: linear-gradient(to bottom, #0a0a2a, #00001a);
+            color: #0ff;
+            border: 2px solid #0ff;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        button:hover {
+            background: linear-gradient(to bottom, #0f0f3a, #00002a);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        
+        .game-over {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 30px;
+            border: 3px solid #f00;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+        }
+        
+        .game-over h2 {
+            color: #f00;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .instructions {
+            margin-top: 20px;
+            max-width: 800px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .instructions h3 {
+            color: #0ff;
+            margin-bottom: 10px;
+        }
+        
+        .instructions p {
+            margin-bottom: 5px;
+        }
+        
+        /* Colores para las piezas */
+        .I { background-color: #00f0f0; }
+        .J { background-color: #0000f0; }
+        .L { background-color: #f0a000; }
+        .O { background-color: #f0f000; }
+        .S { background-color: #00f000; }
+        .T { background-color: #a000f0; }
+        .Z { background-color: #f00000; }
